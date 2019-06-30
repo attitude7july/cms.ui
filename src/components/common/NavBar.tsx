@@ -14,6 +14,7 @@ import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
+import HomeIcon from "@material-ui/icons/Home";
 import LanguageIcon from "@material-ui/icons/Language";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
@@ -200,6 +201,7 @@ function NavBar(props: any) {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
+            <HomeIcon />
             <Trans i18nKey="Title" />
           </Typography>
           <div className={classes.grow} />
