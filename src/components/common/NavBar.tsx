@@ -13,8 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
-import HomeIcon from "@material-ui/icons/Home";
+import HomeIcon from "@material-ui/icons/HomeOutlined";
 import LanguageIcon from "@material-ui/icons/Language";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
@@ -105,7 +104,7 @@ function NavBar(props: any) {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  function handleProfileMenuOpen(event: React.MouseEvent<HTMLElement>) {
+  function handleLanguageMenuOpen(event: React.MouseEvent<HTMLElement>) {
     setAnchorEl(event.currentTarget);
   }
 
@@ -174,16 +173,16 @@ function NavBar(props: any) {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem onClick={handleLanguageMenuOpen}>
         <IconButton
-          aria-label="Account of current user"
+          aria-label="language"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
         >
           <LanguageIcon />
         </IconButton>
-        <p>Profile</p>
+        <p>language</p>
       </MenuItem>
     </Menu>
   );
@@ -192,39 +191,24 @@ function NavBar(props: any) {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             <HomeIcon />
             <Trans i18nKey="Title" />
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            {/* <IconButton aria-label="Show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="Show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
             <IconButton
               edge="end"
               aria-label="change language"
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              onClick={handleLanguageMenuOpen}
               color="inherit"
             >
               <LanguageIcon />
+            </IconButton>
+            <IconButton aria-label="login" color="inherit">
+              
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>

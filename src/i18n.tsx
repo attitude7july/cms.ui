@@ -7,16 +7,20 @@ i18n.use(LanguageDetector).init({
     en: {
       translations: {
         Title: "VFL",
-        Introduction: "Your organization<br/>Licensed Medical Training",
-        Footer: "Something here to give the footer a purpose!"
+        Footer: "Something here to give the footer a purpose!",
+        Introduction: "OUR CERTIFICATIONS",
+        Description:
+          "SAS VFL is authorized to provide Continuing Professional Development training for health professionals. VFL is registered with the ANDPC under number 5249. We are also authorized to provide continuing medical training and since 2017, SAS VFL is a datadocked training organization."
       }
     },
 
     fr: {
       translations: {
         Title: "VFL",
-        Introduction: "Votre Organisme de <br/>  Formation Médicale Agréé",
-        Footer: "Quelque chose ici pour donner un but au pied de page!"
+        Footer: "Quelque chose ici pour donner un but au pied de page!",
+        Introduction: "NOS CERTIFICATIONS",
+        Description:
+          "La SAS VFL est habilitée à dispenser des formations de Développement Professionnel Continu auprès des professionnels de santé. VFL est enregistrée à l'ANDPC sous le n° 5249. Nous sommes également habilités à dispenser des formations médicales continues et depuis 2017, la SAS VFL est un organisme de formation datadocké."
       }
     }
   },
