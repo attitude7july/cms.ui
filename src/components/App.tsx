@@ -56,10 +56,12 @@ function App() {
     <div className="container-fluid">
       <NavBar />
       <CssBaseline />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={PageNotFound} />
-      </Switch>
+      <main>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </main>
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           <Trans i18nKey="Title" />

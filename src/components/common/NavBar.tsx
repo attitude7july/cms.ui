@@ -13,12 +13,12 @@ import Typography from "@material-ui/core/Typography";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import HomeIcon from "@material-ui/icons/HomeOutlined";
 import LanguageIcon from "@material-ui/icons/Language";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import { red } from "@material-ui/core/colors";
+import { red, green, pink } from "@material-ui/core/colors";
+import Avatar from "@material-ui/core/Avatar";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     grow: {
@@ -88,6 +88,15 @@ const useStyles = makeStyles((theme: Theme) =>
       "&:hover": {
         color: red[800]
       }
+    },
+    pinkAvatar: {
+      color: "#fff",
+      height: "100%",
+      width: "100%"
+    },
+    appBar:{
+
+      backgroundColor: "#ff9a03",
     }
   })
 );
@@ -189,11 +198,13 @@ function NavBar(props: any) {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            <HomeIcon />
-            <Trans i18nKey="Title" />
+            <Avatar
+              className={classes.pinkAvatar}
+              src="https://www.vfl-formation.com/images/logo_vfl.png"
+            />
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
@@ -207,9 +218,7 @@ function NavBar(props: any) {
             >
               <LanguageIcon />
             </IconButton>
-            <IconButton aria-label="login" color="inherit">
-              
-            </IconButton>
+            <IconButton aria-label="login" color="inherit" />
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

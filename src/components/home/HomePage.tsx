@@ -1,26 +1,12 @@
 import React from "react";
 import { withTranslation, Trans } from "react-i18next";
-import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Built with love by the "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {" team."}
-    </Typography>
-  );
-}
 const useStyles = makeStyles(theme => ({
   icon: {
     marginRight: theme.spacing(2)
@@ -57,9 +43,9 @@ function HomePage() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
-  function handleExpandClick() {
-    setExpanded(!expanded);
-  }
+  // function handleExpandClick() {
+  //   setExpanded(!expanded);
+  // }
   const cards = [
     {
       imageUrl: "https://www.vfl-formation.com/images/cert1.jpg",
@@ -104,7 +90,7 @@ function HomePage() {
           >
             <Trans i18nKey="Description" />
           </Typography>
-          <div className={classes.heroButtons}>
+          {/* <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary">
@@ -117,7 +103,7 @@ function HomePage() {
                 </Button>
               </Grid>
             </Grid>
-          </div>
+          </div> */}
         </Container>
       </div>
       <Container className={classes.cardGrid} maxWidth="md">
